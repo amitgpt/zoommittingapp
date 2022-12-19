@@ -5,13 +5,13 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const payload = {
-  iss: 'dM2ffQSXR0-kKq1qz5GQJQ', //your API KEY
+  iss: 'api key', //your API KEY
   exp: new Date().getTime() + 5000,
 };
-const token = jwt.sign(payload, 'u9k86Ooy3tWoxEeJLNl66DjMPlPaQ6PbB3PG'); //your API SECRET HERE
+const token = jwt.sign(payload, 'sercet key'); //your API SECRET HERE
 
 router.get("/createMeeting", (req, res) => {
-  email = "yacexis770@paxven.com"; // your zoom developer email account
+  email = "email"; // your zoom developer email account
   var options = {
     method: "POST",
     uri: "https://api.zoom.us/v2/users/" + email + "/meetings",
